@@ -11,6 +11,7 @@ function App() {
         <>
             <Header>
                 <Search/>
+                <Medicines />
             </Header>
             <div className='mild-defaults'>
                 <Medicines medicines={medicines} />
