@@ -1,7 +1,8 @@
 .root {
-    background-color: lightblue;
+    background-color: rgb(75, 107, 117);
     padding: 30px;
     border: 1px solid;
     text-emphasis: bold;
+    text-align: center;
 }
 
