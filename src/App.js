@@ -11,7 +11,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   //   const [searchResults, setSearchResults] = useState([]);
   const handleChange = (event) => {
-    setSearchTerm(event.target.value);
+    setSearchTerm(event.target.value.toLowerCase());
   };
   return (
     <>
