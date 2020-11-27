@@ -1,5 +1,13 @@
 .root {
-  background-color: rgb(75, 107, 117);
+  background-color: rgb(105, 152, 167);
+  padding: 30px;
+  border: 1px solid;
+  text-emphasis: bold;
+  text-align: center;
+}
+
+.change {
+  background-color: rgb(167, 105, 121);
   padding: 30px;
   border: 1px solid;
   text-emphasis: bold;
