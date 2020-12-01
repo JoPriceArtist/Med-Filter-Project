@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './medicines.module.css';
-import { AidOption } from 'grommet-icons';
+import Medicine from '../../components/medicine/medicine';
 
 const Medicines = ({ medicines, searchTerm }) => {
   const filteredArray = medicines.filter((medicine) => {
@@ -14,16 +14,6 @@ const Medicines = ({ medicines, searchTerm }) => {
 
   //   const (ternary) = <condition> ? <ifTrue> : <ifFalse>
   const arrayToRender = searchTerm ? filteredArray : medicines;
-
-  const myMedStyle = {
-    textAlign: 'center',
-    margin: '15px',
-    border: '1px solid',
-    padding: '15px',
-    backgroundColor: 'white',
-    borderRadius: '10px',
-    boxShadow: '2px 4px grey',
-  };
 
   if (!medicines) {
     return <div>no medicines</div>;
@@ -40,14 +30,7 @@ const Medicines = ({ medicines, searchTerm }) => {
     <div className={styles.root}>
       {alert}
       {arrayToRender.map((m, i) => (
-        <div style={myMedStyle} key={i}>
-          {' '}
-          <div>
-            <AidOption />
-          </div>
-          <div>name: {m.name}</div>
-          <div> company: {m.company}</div>
-        </div>
+        <Medicine key={i} name={m.name} company={m.company} />
       ))}
     </div>
   );
