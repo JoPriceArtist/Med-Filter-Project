@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './medicines.module.css';
+import { AidOption } from 'grommet-icons';
 
 const Medicines = ({ medicines, searchTerm }) => {
   const [filteredArray, setFilteredArray] = useState([]);
@@ -44,6 +45,9 @@ const Medicines = ({ medicines, searchTerm }) => {
       {filteredArray.map((m, i) => (
         <div style={myMedStyle} key={i}>
           {' '}
+          <div>
+            <AidOption />
+          </div>
           <div>name: {m.name} </div>
           <div>company: {m.company}</div>
         </div>
