@@ -39,7 +39,7 @@ const Medicines = ({ medicines, searchTerm }) => {
   return (
     <div className={styles.root}>
       {alert}
-      {filteredArray.map((m, i) => (
+      {arrayToRender.map((m, i) => (
         <div style={myMedStyle} key={i}>
           {' '}
           <div>
